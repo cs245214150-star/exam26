@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Palindrome Checker</title>
+
+<script>
+function checkPalindrome() {
+
+    let text = document.getElementById("word").value;
+    let reversed = text.split("").reverse().join("");
+
+    if(text === reversed)
+        document.getElementById("result").innerText = "It is a Palindrome";
+
+    else
+        document.getElementById("result").innerText = "It is not a Palindrome";
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>Palindrome Checker</h2>
+
+<label>Enter a word or number:</label>
+<input type="text" id="word">
+
+<br><br>
+
+<button onclick="checkPalindrome()">Check</button>
+
+<p id="result"></p>
+
+</body>
+</html>
